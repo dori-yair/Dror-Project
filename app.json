@@ -1,0 +1,12 @@
+{
+  "name": "miri",
+  "displayName": "miri",
+  "expo": {
+    "name": "miri",
+    "slug": "miri",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
