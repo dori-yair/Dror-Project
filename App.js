@@ -1,23 +1,21 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button, Platform} from 'react-native';
-import FormScreen from './components/FormScreen';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import {StyleSheet} from 'react-native';
+
+import AddEventScreen from './components/AddEventScreen';
+import HomeScreen from './components/HomeScreen'
+
+const Stack = createStackNavigator();
 
 export default function App () {
   return (
-    <View style={styles.container}>
-      <Text>Hi</Text>
-        <FormScreen/> 
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="מסך הבית">
+      <Stack.Screen name="מסך הבית" component={HomeScreen} />
+      <Stack.Screen name="הוסף אירוע" component={AddEventScreen} />
+    </Stack.Navigator>
+  </NavigationContainer>
+
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  button:{
-      backgroundColor: '#f3f3f3'
-  }
-});
