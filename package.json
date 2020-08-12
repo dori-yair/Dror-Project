@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "2.4.0",
+    "@react-native-community/masked-view": "0.1.10",
     "@react-native-community/voice": "^1.1.6",
     "@react-navigation/native": "^5.7.2",
     "@react-navigation/stack": "^5.8.0",
@@ -17,6 +18,7 @@
     "expo-splash-screen": "~0.4.0",
     "expo-status-bar": "^1.0.0",
     "expo-updates": "~0.2.10",
+    "linq.js": "^2.0.0",
     "moments": "0.0.2",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
@@ -26,8 +28,7 @@
     "react-native-reanimated": "~1.9.0",
     "react-native-screens": "~2.9.0",
     "react-native-unimodules": "~0.10.1",
-    "react-native-web": "~0.11.7",
-    "@react-native-community/masked-view": "0.1.10"
+    "react-native-web": "~0.11.7"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
