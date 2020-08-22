@@ -22,6 +22,10 @@ export function HomeScreen({ navigation }) {
           title="רשימת אירועים"
           onPress={() => navigation.navigate('רשימת אירועים')}
         />
+         <Button
+          title="בלתמ"
+          onPress={() => navigation.navigate('בלתמ')}
+        />
       </View>
     );
   }

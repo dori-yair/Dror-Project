@@ -29,7 +29,7 @@ class EventListScreen extends Component {
       this.setState({ calendars: cals  }))
 
       var date = new Date();
-      Calendar.getEventsAsync(['0','1','2','3','4','5'], date , new Date(date.getFullYear(),date.getMonth()+1,date.getDay(),0,0,0,0)).then(events =>
+      Calendar.getEventsAsync(['0','1','2','3','4','5'], date , new Date(date.getFullYear(),date.getMonth()+3,date.getDay(),0,0,0,0)).then(events =>
         this.setState({calendarEvents: events}) 
       )
  //   Calendar.getCalendarsAsync().then(onfull
@@ -60,7 +60,7 @@ class EventListScreen extends Component {
     grouped.forEach(( value,key) => {events.push(
       {
         title:key, 
-       // day: moment(value.startDate).format("DD-MM"),
+        day: moment(key,'DD-MM-YY').format('dddd'),
         data: value.map( (item) => item)
       }
     )})
@@ -105,7 +105,7 @@ eventPressed(event){
             <Text style={styles.item}>{item.title}</Text><Text style={styles.item}>{moment( item.startDate).format("HH:mm")}-{moment( item.endtDate).format("HH:mm")}</Text>
           </View>
           }
-          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+        renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title} {section.day}</Text>}
           keyExtractor={(item, index) => index}
           ItemSeparatorComponent={this.ItemSeparator}
         //  onEndReached={this.onEndReached()}   
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     fontSize: 14,
     fontWeight: 'bold',
-    backgroundColor: 'tomato',
+    backgroundColor: 'lightblue',
     textAlign:"right"
   },
   item: {
